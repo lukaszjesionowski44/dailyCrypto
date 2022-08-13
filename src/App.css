@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300&family=Edu+TAS+Beginner:wght@500&display=swap');
+
+
+:root {
+  --gray: #433E3F;
+  --brown-light: #d1af8d;
+  --brown-dark: #8E6E53;
+  --silver: #cccbcb;
+  --nickel: #7A7265;
+
+  --logo-font: 'Playfair Display';
+  --main-font: 'Arima';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: var(--silver)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  background-color: var(--gray);
   display: flex;
-  flex-direction: column;
+}
+
+.navbar__link-logo {
+  color: var(--brown-light);
+  text-decoration: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: var(--silver);
+  width: 100%;
+  padding: 1rem 0rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: 0.3s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar__link:hover {
+  background-color: var(--brown-light);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cryptoBlock__box-shadow {
+  -webkit-box-shadow: 36px 35px 34px -49px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 36px 35px 34px -49px rgba(0, 0, 0, 1);
+  box-shadow: 36px 35px 34px -49px rgba(0, 0, 0, 1);
+
+  transition: 0.2s ease-out;
+}
+
+.cryptoBlock__box-shadow:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.winner {
+  -webkit-box-shadow: 36px 35px 34px -49px rgb(247, 3, 3);
+  -moz-box-shadow: 36px 35px 34px -49px rgb(247, 3, 3);
+  box-shadow: 36px 35px 34px -49px rgb(247, 3, 3);
+}
+
+.searchInput {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 12px;
+  border: none;
+  margin: 2rem;
+  background-color: var(--silver);
+  text-align: center;
+  margin: '1rem'
+}
+
+.searchInput::placeholder {
+  text-align: center;
+  color: var(--gray);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.select__timeframe {
+  width: '8rem';
+  height: '4rem'
+}
+
+.typo__links a {
+  text-decoration: none;
+  color: var(--nickel);
+  font-weight: 700;
 }
