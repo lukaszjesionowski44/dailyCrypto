@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material'
 const NewsBlock = ({ sourceLogo, source, category, title, link, image }) => {
   return (
     <a href={link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-      <Box width="300px" height="260px" p='1rem' m='2rem' backgroundColor="var(--silver)" display="flex" flexDirection="column" borderRadius="12px" className="cryptoBlock__box-shadow">
+      <Box width="300px" height="260px" p='1rem' m='2rem' backgroundColor="var(--silver)" display="flex" flexDirection="column" borderRadius="12px"className="cryptoBlock__box-shadow">
         <Box display="flex" justifyContent="space-between" mb="1rem">
           <Box display="flex" flexDirection="column" justifyContent="space-between">
             <Typography flexWrap="wrap" display="flex" fontSize="20px" color="var(--gray)" fontFamily="var(--main-font)" p='0rem 1rem'>

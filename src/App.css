@@ -18,8 +18,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--main-font);
+  
 }
-
 a {
   text-decoration: none;
   color: var(--silver)
@@ -28,11 +28,29 @@ a {
 .app {
   background-color: var(--gray);
   display: flex;
+  position: relative;
+}
+
+.navigation__wrapper{
+  overflow-x: hidden;
 }
 
 .navbar__link-logo {
   color: var(--brown-light);
   text-decoration: none;
+  font-size:42px;
+}
+
+@media screen and (max-width:1200px){
+  .navbar__link-logo{
+    font-size:36px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .navbar__link-logo{
+    font-size:30px;
+  }
 }
 
 .navbar__link {
@@ -97,4 +115,23 @@ a {
   text-decoration: none;
   color: var(--nickel);
   font-weight: 700;
+}
+
+.main__content_wrapper{
+  width:80vw;
+}
+
+.main__content_media{
+  width:80vw;
+}
+
+@media screen and (max-width:750px){
+  .main__content_media{
+    width:100vw;
+  }
+
+  .main__content_wrapper{
+    width:100vw;
+  }
+
 }

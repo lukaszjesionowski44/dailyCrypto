@@ -45,13 +45,14 @@ const Top10Cryptos = () => {
   console.log(cryptos)
 
   const lg = useMediaQuery('(max-width:1350px)')
+  const md = useMediaQuery('(max-width:1200px)')
 
   return (
     <Box display="flex" flexDirection="column" flex="0.5" justifyContent="center" alignItems="center">
       <Box p="1rem" color="var(--silver)">
         <Typography fontSize="30px" fontFamily="var(--main-font)">Top 10 Cryptocurrencies</Typography>
       </Box>
-      <Box width={!lg ? '30vw' : '55vw'}>
+      <Box sx={{width:{xs: '100vw', sm:'70vw', md:'60vw', lg:'40vw', xl:'30vw'}}}>
         <Box display="flex" alignItems="center" justifyContent="right">
           <Link to='/cryptocurrencies' style={{ textDecoration: 'none', color: 'var(--silver)' }}>
             All cryptocurrencies

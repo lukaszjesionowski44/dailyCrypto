@@ -18,7 +18,7 @@ const CryptoNews = () => {
 
 
   return (
-    <Box height="40vh" width="80vw" p='1.5rem' display="Flex" flexDirection="column" alignItems="center" justifyContent="space-between" >
+    <Box p='1.5rem' display="Flex" flexDirection="column" alignItems="center" justifyContent="space-between" >
       <Typography fontSize="30px" fontFamily="var(--main-font)" color="var(--silver)">Today's news</Typography>
       <Box display="flex" alignItems="center" justifyContent="left" >
         <Link to='/news' style={{ textDecoration: 'none', color: 'var(--silver)' }}>
@@ -27,7 +27,7 @@ const CryptoNews = () => {
         <ArrowForwardIcon style={{ width: "15px", color: 'var(--silver)', marginLeft: '0.5rem' }} />
       </Box>
 
-      {!loadingNews && <Box display="flex">
+      {!loadingNews && <Box display="flex" flexWrap="wrap">
         {frontPageNews.map((news) => (
           <NewsBlock key={news.datePublished} sourceLogo={news?.provider[0].image?.thumbnail?.contentUrl} source={news.provider[0].name} category={news.category} title={news.name} link={news.url} image={news?.image?.thumbnail?.contentUrl} />
         ))}

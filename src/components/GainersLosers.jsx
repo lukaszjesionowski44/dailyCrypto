@@ -29,7 +29,7 @@ const GainersLosers = () => {
 
 
   return (
-    <Box display="flex" flexDirection="column" flex="0.5" flexWrap="wrap" justifyContent="center" alignItems="center">
+    <Box display="flex" flexDirection="column" flex="0.5"  justifyContent="center" alignItems="center" className="gainers__loses_media">
       <Box display='flex' alignItems="center" justifyContent="center" p="1rem" color="var(--silver)">
         <Typography fontSize="30px" fontFamily="var(--main-font)">Today's winners & losers</Typography>
       </Box>

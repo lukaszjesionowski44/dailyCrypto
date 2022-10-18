@@ -43,7 +43,7 @@ const Exchanges = () => {
   console.log(exchanges)
 
   return (
-    <Box width="80vw">
+    <Box className="main__content_media">
       {!loading && <Box
         height="7vh"
         display='flex'
@@ -53,7 +53,7 @@ const Exchanges = () => {
         backgroundColor="var(--nickel)"
       >
         <Typography
-          fontSize="30px"
+          sx={{fontSize:{sm:'16px', md: '24px', lg: '30px'}}}
           color="var(--silver)"
           fontFamily="var(--main-font)">
           List of top 100 exchanges

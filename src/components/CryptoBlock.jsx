@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom'
 const CryptoBlock = ({ rank, name, id, symbol, icon, change, oneHourChange, price, marketcap, volume }) => {
   return (
     <Link to={`/cryptocurrency/${id}`} style={{ textDecoration: 'none' }}>
-      <Box width="200px" height="300px" margin="1rem" backgroundColor="var(--nickel)" display="flex" justifyContent="center" flexDirection="column" borderRadius="12px" className="cryptoBlock__box-shadow">
+      <Box sx={{width:{ md:'200px'}}} height="300px" margin="1rem" backgroundColor="var(--nickel)" display="flex" justifyContent="center" flexDirection="column" borderRadius="12px"   
+      className="cryptoBlock__box-shadow">
         <Box display="flex" alignItems="center" justifyContent="center">
           <Typography fontSize="22px" mt="1rem" color="var(--brown-light)" fontFamily="var(--main-font)" fontWeight="500">
             {rank} {name}
