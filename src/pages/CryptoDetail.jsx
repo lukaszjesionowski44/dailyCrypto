@@ -57,14 +57,14 @@ const CryptoDetail = () => {
   console.log(cryptoInfo)
 
   return (
-    <Box width='80vw'>
+    <Box className="main__content_wrapper">
       {!loading && <Box
         height="7vh"
         display='flex'
         alignItems="center"
         justifyContent="center"
         backgroundColor="var(--nickel)"
-        width="80vw">
+        className="main__content_media">
         <Typography
           fontSize="30px"
           color="var(--silver)"
@@ -73,12 +73,11 @@ const CryptoDetail = () => {
           {cryptoDetails?.data?.name}
         </Typography>
       </Box>}
-      <Box p='3rem' width="100%">
+      <Box sx={{p:{xs: '0.5rem', sm:'0.5rem', md:'2rem', lg:'3rem'}}} width="100%">
         <Box>
           <Typography display="flex"
             justifyContent="right"
-            pr="3rem"
-            fontSize="22px"
+            sx={{fontSize:{xs:'12px', sm:'14px', md:'16px', lg:'18px', xl:'22px'}, pr:{sm:'0.5rem', md:'2rem', lg:'3rem'}}}
             color="var(--silver)"
             fontFamily="var(--main-font)">
             {cryptoInfo[0]?.current_price} USD
@@ -86,7 +85,7 @@ const CryptoDetail = () => {
           <Typography display="flex"
             justifyContent="right"
 
-            fontSize="22px"
+            sx={{fontSize:{xs:'12px', sm:'14px', md:'16px', lg:'18px', xl:'22px'}}}
             color="var(--silver)"
             fontFamily="var(--main-font)">
             24H Price change: &nbsp;
@@ -94,7 +93,7 @@ const CryptoDetail = () => {
           </Typography>
         </Box>
 
-        <Typography display="flex" justifyContent="center" fontSize="36px"
+        <Typography display="flex" justifyContent="center"  sx={{fontSize:{xs:'18px', sm:'22px', md:'26px', lg:'30px', xl:'36px'}, mt:{xs:'2rem', sm:'1rem', md:'0.5rem', lg:'0rem'}}}
           color="var(--silver)"
           fontFamily="var(--main-font)"
         >
@@ -126,111 +125,111 @@ const CryptoDetail = () => {
           {cryptoDetails?.data?.name} Statistics
         </Typography>
         <Box display="flex" justifyContent="space-between" mt='2rem'>
-          {!loadingCryptoData && <Stack display="flex" justifyContent="center" width="30%" margin="0 auto">
-            <Box alignItems="center" height="3rem" p='1rem' display="flex" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+          {!loadingCryptoData && <Stack display="flex" justifyContent="center" margin="0 auto" sx={{width:{xs:'45%', sm:'45%', md:'40%', xl:'30%'}}}>
+            <Box alignItems="center" height="3rem" p='1rem' display="flex" justifyContent="space-between" borderBottom='1px solid var(--brown-light)' >
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <PaidIcon width="20px" /> &nbsp;
+                <PaidIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}} /> &nbsp;
                 Price to USD</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)"> {cryptoInfo[0]?.current_price}</Typography>
             </Box>
             <Box p='1rem' display="flex" alignItems="center" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <EqualizerIcon width='20px' /> &nbsp;
+                <EqualizerIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}} /> &nbsp;
                 Total Volume</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
 
                 {millify(cryptoInfo[0]?.total_volume)}</Typography>
             </Box>
             <Box p='1rem' display="flex" alignItems="center" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <InventoryIcon width='20px' /> &nbsp;
+                <InventoryIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}} /> &nbsp;
                 Total Supply</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)"> {millify(cryptoInfo[0]?.total_supply)}</Typography>
             </Box>
             <Box p='1rem' display="flex" alignItems="center" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <CurrencyExchangeIcon width="20px" /> &nbsp;
+                <CurrencyExchangeIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}} /> &nbsp;
                 Circulating Supply</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)"> {Math.round(cryptoInfo[0]?.circulating_supply)}</Typography>
             </Box>
           </Stack>}
-          {!loadingCryptoData && <Stack display="flex" justifyContent="center" width="30%" margin="0 auto">
+          {!loadingCryptoData && <Stack display="flex" justifyContent="center" sx={{width:{xs:'45%', sm:'45%', md:'40%', xl:'30%'}}} margin="0 auto">
             <Box alignItems="center" height="3rem" p='1rem' display="flex" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <AutoFixHighIcon width="20px" /> &nbsp;
+                <AutoFixHighIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}}/> &nbsp;
                 All Time High</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
                 {cryptoInfo[0]?.ath} USD</Typography>
             </Box>
             <Box p='1rem' display="flex" alignItems="center" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <PercentIcon width="20px" /> &nbsp;
+                <PercentIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}}/> &nbsp;
                 Ath Change Percentage</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)"> {cryptoInfo[0]?.ath_change_percentage.toFixed(2)} %</Typography>
             </Box>
             <Box p='1rem' display="flex" alignItems="center" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <AirlineStopsIcon width='20px' /> &nbsp;
+                <AirlineStopsIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}}/> &nbsp;
                 24h High</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
 
                 {cryptoInfo[0]?.high_24h} USD</Typography>
             </Box>
             <Box p='1rem' display="flex" alignItems="center" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)">
-                <SouthEastIcon width='20px' /> &nbsp;
+                <SouthEastIcon  sx={{width:{xs:'14px', sm:'14px', md:'16px', lg:'18px', xl:'20px'}}} /> &nbsp;
                 24h Low</Typography>
-              <Typography fontSize="16px"
+              <Typography sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}}
                 color="var(--silver)"
                 fontFamily="var(--main-font)"> {cryptoInfo[0]?.low_24h} USD</Typography>
             </Box>
           </Stack>}
         </Box>
         <Box>
-          <Typography mt='5rem' display="flex" justifyContent="center" fontSize="30px"
+          <Typography mt='5rem' display="flex" justifyContent="center" sx={{fontSize:{xs:'18px', sm:'20px', lg:'26px', xl:'30px'}}}
             color="var(--silver)"
             fontFamily="var(--main-font)"
             mb="1rem"
           >
-            Learn more about {cryptoDetails?.data?.name} &nbsp; <img src={cryptoDetails?.data?.image.small} alt="logo" />
+            Learn more about {cryptoDetails?.data?.name} &nbsp; <img src={cryptoDetails?.data?.image.small} alt="logo" className='cryptoDetail__image--bottom'/>
           </Typography>
           {!loading && <Box>
-            <Stack display="flex" justifyContent="center" width="70%" margin="0 auto" >
+            <Stack display="flex" justifyContent="center" sx={{width:{xs:'100%', sm:'100%', md:'80%', lg:'70%', xl:'70%'}}} margin="0 auto" >
               {cryptoDetails?.data?.links?.homepage[0] && <Box alignItems="center" height="3rem" p='1rem' display="flex" justifyContent="space-between" borderBottom='1px solid var(--brown-light)'>
                 <Typography fontSize="16px"
                   color="var(--silver)"
                   fontFamily="var(--main-font)">
-                  <HomeIcon width="20px" /> &nbsp;
+                  <HomeIcon sx={{fontSize:{xs:'12px', sm:'12px', lg:'16px', xl:'16px'}}} /> &nbsp;
                   Homepage</Typography>
                 <Typography fontSize="16px"
                   color="var(--silver)"

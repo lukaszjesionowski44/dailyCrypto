@@ -56,6 +56,8 @@ const LineChart = ({ id }) => {
   };
 
   const options = {
+    responsive:true,
+    maintainAspectRatio:true,
     scales: {
       yAxes: [
         {
@@ -74,7 +76,7 @@ const LineChart = ({ id }) => {
 
   return (
     <Box width='100%'>
-      <Box width="80%" margin='0 auto'>
+      <Box width="80%" sx={{width:{xs:'100%', sm:'100%', md:'80%', lg:'80%', xl:'80%'}}} margin='0 auto'>
         {priceDetails?.prices ? <Line data={data} options={options} /> : <CircularProgress />}
         <FormControl style={{ marginTop: '2rem' }} sx={{ m: 3, minWidth: 150 }} size="small">
           <InputLabel id="demo-simple-select-label" style={{

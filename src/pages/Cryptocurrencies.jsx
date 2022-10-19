@@ -29,7 +29,7 @@ const Cryptocurrencies = () => {
   console.log(cryptos)
 
   return (
-    <Box width="80vw">
+    <Box className="main__content_wrapper">
       {!loading && <Box
         height="7vh"
         display='flex'
@@ -38,25 +38,24 @@ const Cryptocurrencies = () => {
         backgroundColor="var(--nickel)"
       >
         <Typography
-          fontSize="30px"
+          sx={{fontSize: {xs:'20px', sm:'22px',md:'24px', lg:'30px'}}}
           color="var(--silver)"
           fontFamily="var(--main-font)">
           List of top 100 cryptocurrencies
         </Typography>
       </Box>}
-      <Box width="80vw" p="2rem" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Box className="main__content_wrapper" p="2rem" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
         <input className="searchInput" placeholder="Search cryptocurrencies..." background="var(--silver)" onChange={(e) => setSearchCrypto(e.target.value)} />
-        <Box width="60vw" display="flex">
-          <Box display="flex" width="20vw">
-            <Typography fontSize="18px"
+        <Box className='cryptos__content_wrapper' display="flex">
+          <Box display="flex" sx={{width:{xs:'33vw', md:'20vw'}}}>
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}, width:{xs:'6vw', md:'4vw'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
-              width="3vw"
               p="1rem"
             >
               Rank
             </Typography>
-            <Typography fontSize="18px"
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
               width="3vw"
@@ -65,38 +64,35 @@ const Cryptocurrencies = () => {
               Coin
             </Typography>
           </Box>
-          <Box display="flex" width="20vw">
-            <Typography fontSize="18px"
+          <Box display="flex" sx={{width:{xs:'42vw', md:'20vw'}}}>
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}, width:{xs:'14vw', md:'8vw'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
-              width="8vw"
               p="1rem">
               Price
             </Typography>
-            <Typography fontSize="18px"
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}, width:{xs:'12vw', md:'5vw'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
-              width="5vw"
               p="1rem">
               1H
             </Typography>
-            <Typography fontSize="18px"
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
-              width="5vw"
               p="1rem">
               24H
             </Typography>
           </Box>
           <Box display="flex" width="20vw">
-            <Typography fontSize="18px"
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
               width="10vw"
               p="1rem">
               24h Volume
             </Typography>
-            <Typography fontSize="18px"
+            <Typography sx={{fontSize: {xs:'12px', sm:'14px',md:'16px', lg:'18px'}}}
               color="var(--silver)"
               fontFamily="var(--main-font)"
               width="10vw"
@@ -106,7 +102,7 @@ const Cryptocurrencies = () => {
             </Typography>
           </Box>
         </Box>
-        <Box width="60vw">
+        <Box className='cryptos__content_wrapper'>
           {!filteredCrypto &&
             <Box width="100%" height="100%" display="flex" alignItems="center" justifyContent="center">
               <CircularProgress />

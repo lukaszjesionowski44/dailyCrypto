@@ -33,6 +33,7 @@ const App = () => {
           </div>
         )}
         {menuClicked && <div className="mobile__menu">
+          <Link to='/' onClick={() => setMenuClicked(false)}>DailyCrypto</Link>
           <Link to='/cryptocurrencies' onClick={() => setMenuClicked(false)}>Cryptocurrencies</Link>
           <Link to='/news' onClick={() => setMenuClicked(false)} >News</Link>
           <Link to='/exchanges' onClick={() => setMenuClicked(false)}>Exchanges</Link>

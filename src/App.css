@@ -125,6 +125,27 @@ a {
   width:80vw;
 }
 
+.cryptos__content_wrapper{
+  width:60vw;
+}
+
+.cryptocurrencyBlock__rank{
+  width: 20vw;
+}
+.cryptocurrencyBlock__icon{
+  width:15vw;
+}
+.cryptocurrencyBlock__name{
+  width:15vw;
+}
+.cryptocurrencyBlock__price{
+  width:20vw;
+}
+.cryptocurrencyBlock__volume{
+  width:20vw;
+}
+
+
 @media screen and (max-width:750px){
   .main__content_media{
     width:100vw;
@@ -134,4 +155,27 @@ a {
     width:100vw;
   }
 
+  .cryptos__content_wrapper{
+    width:100vw;
+  }
+
+
+  .cryptocurrencyBlock__rank{
+    width: 30vw;
+  }
+  .cryptocurrencyBlock__icon{
+    width:20vw;
+  }
+  .cryptocurrencyBlock__name{
+    width:25vw;
+  }
+  .cryptocurrencyBlock__price{
+    width:40vw;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .cryptocurrencyBlock__volume{
+    width:25vw;
+    justify-content: flex-end;
+  }
 }
